@@ -1,0 +1,21 @@
+.custom-min-height-admin {
+    min-height: 100vh;
+}
+
+.hover-bg-link {
+    transition: background-color 0.3s ease;
+}
+
+.hover-bg-link:hover {
+    background-color: #f0f0f0; 
+
+}
+@media (max-width: 768px) {
+    .custom-min-height-admin {
+        flex-direction: column; 
+    }
+
+    aside {
+        max-width: 100%; 
+    }
+}

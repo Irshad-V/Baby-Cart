@@ -1,38 +1,406 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* header */
+.search-input-header:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.login:hover {
+  background-color: red;
+}
+
+.admin-page-button:hover {
+  background-color: rgb(241 245 249);
+}
+
+.admin-page-button {
+  background-Color: 'transparent';
+}
+
+/* adminpage */
+
+.custom-min-height-admin {
+  height: calc(100vh - 120px);
+
+}
+
+.hover-bg-link {
+  text-decoration: none;
+}
+
+
+.hover-bg-link:hover {
+  background-color: #f1f5f9;
+
+}
+
+
+@media (min-width: 767px) {
+  .font{
+    font-size: 14px !important;
+  }
+}
+/* app.js page */
+.custom-min-height {
+  min-height: calc(100vh - 120px);
+  padding-top: 1rem;
+}
+
+/* signup page */
+
+
+.upload-photo-place {
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #007bff;
+  cursor: pointer;
+  font-size: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="file"] {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.input-group-append {
+  cursor: pointer;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.form-control {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+}
+
+/* all users */
+
+.table-dark th, .table-dark td {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+
+
+/* uploadimage page */
+/* For the uploaded image */
+.image-upload:hover .image-upload-sub {
+  background-color: #dc2626 !important;
+  display: block !important;
+}
+
+
+
+
+/* Adminpanel */
+
+/* uploadproduct */
+.card-upload {
+  max-width: 400px;
+  width: 90%;
+  max-height: 400px;
+  overflow-y: auto;
+
+}
+.card-margin{
+  margin-right: 300px;
+}
+
+@media (max-width: 767px) {
+  .card-upload {
+    overflow-y: auto;
+    margin-right: 0;
+
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.bg-opacity {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+/* home page */
+/* catagory  */
+.custom-scrollbar-hidden {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* banner */
+.carousel-item-img {
+  min-height: 350px;
+  max-height: 750px;
+  width: 100%;
+  object-fit: cover;
+  /* Ensures images cover the container without distortion */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-item-img {
+    min-height: 250px;
+    /* Adjust for smaller screens */
+
+  }
+}
+
+
+/* upsideproductcard */
+/* HorizontalCardProduct.css */
+
+/* Hide scrollbar */
+.scrollbar-none {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+/* Animation for loading placeholders */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Product card styling */
+.product-card {
+  min-width: 300px !important;
+  max-width: 350px;
+  height: 9rem !important;
+
+  flex: 0 0 auto;
+}
+
+
+.image-placeholder {
+  min-width: 120px;
+}
+
+@media (min-width: 768px) {
+  .image-placeholder {
+    min-width: 145px;
+  }
+}
+
+@media (max-width: 358px) {
+  .product-card {
+    min-width: 280px !important;
+    max-width: 280px;
+    height: 9rem !important;
+
+    flex: 0 0 auto;
+  }
+
+}
+
+.hover-scale {
+  transition: transform 0.3s;
+}
+
+.hover-scale:hover {
+  transform: scale(1.10);
+}
+
+
+.btn-navigation {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+
+.scroll-navigation-btn-left,
+.scroll-navigation-btn-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 2rem;
+  height: 2rem
+}
+
+
+.scroll-navigation-btn-left svg, .scroll-navigation-btn-right svg {
+  width: 1rem;
+  height: 1rem;
+
+}
+
+
+/* downside-product-card */
+.downside-product-card {
+  height: 340px;
+  min-width: 180px !important;
+  max-width: 180px !important;
+
+}
+
+.image-placeholder-downside {
+  height: 150px;
+
+}
+
+.image-downside {
+  width: 100px !important;
+}
+
+/* cart */
+
+/* :verticalcard */
+
+.product-card-verticalcard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.product-card-verticalcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-vertical {
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  transition: transform 1s ease;
+
+}
+
+.card-img-vertical:hover {
+  transform: scale(1.08);
+
+}
+
+.product-image-verticalcard {
+  width: 100% !important;
+  height: 120px !important;
+  object-fit: contain;
+  /* transition: transform 0.3s ease; */
+}
+
+.product-image-card {
+  transition: transform 0.3s ease;
+}
+
+.product-image-card:hover {
+  transform: scale(1.05);
+}
+
+/* Loading placeholders */
+.loading-card-verticalcard {
+  height: 350px;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+}
+
+.loading-image-verticalcard {
+  height: 150px;
+  width: 150px;
+}
+
+.loading-title-verticalcard,
+.loading-text-verticalcard,
+.loading-price-verticalcard,
+.loading-strike-verticalcard,
+.loading-btn-verticalcard {
+  height: 1.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #e9ecef;
+}
+
+.loading-btn-verticalcard {
+  height: 2rem;
+}
+
+
+/* cancel-payment-container */
+.cancel-payment-container {
+  background-color: #f8f9fa;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+  .login {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .cart-bucket {
+    font-size: 20px !important;
+  }
+
+  .cart-bucket-count {
+    font-size: 10px !important;
+  }
+
+}
+
+@media (max-width: 350px) {
+  .user-datas {
+    gap: 1.5rem !important;
   }
 }
